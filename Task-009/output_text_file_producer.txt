@@ -1,0 +1,17 @@
+kafka
+start zookeeper
+zookeeper-server-start.sh /home/haidar/opt/kafka_2.11-2.3.1/config/zookeeperroperties 
+
+start server 
+kafka-server-start.sh /home/haidar/opt/kafka_2.11-2.3.1/config/server1.properties 
+
+
+turn on producer
+kafka-console-producer.sh --broker-list localhost:9099 --topic kafkatopic
+
+turn on consumer on topic 'kafka topic
+kafka-console-consumer.sh --bootstrap-server localhost:9099  --topic kafkatopic
+
+
+run producer and output text file 
+kafka-console-producer.sh --broker-list localhost:9099 --topic kafkatopic < /home/haidar/Documents/MindBender_BD/Task-009/Shakespeare.txt
